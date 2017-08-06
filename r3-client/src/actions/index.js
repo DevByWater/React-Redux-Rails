@@ -1,45 +1,45 @@
 import axios from 'axios'
 
-export const FETCH_POSTS = 'fetch_posts'
-export const FETCH_SINGLE_POST = 'fetch_single_post'
-export const CREATE_POST = 'create_post'
-export const DELETE_POST = 'delete_post'
+export const FETCH_ARTICLES = 'fetch_articles'
+export const FETCH_SINGLE_ARTICLE = 'fetch_single_article'
+export const CREATE_ARTICLE = 'create_article'
+export const DELETE_ARTICLE = 'delete_article'
 
 const ROOT_URL = "http://localhost:3030/api/v1"
 const API_KEY
 
-export function fetchPosts(){
+export function fetchArticle(){
     const requests = axios.get(`${ROOT_URL}/articles`)
     
     return{
-        type: FETCH_POSTS,
+        type: FETCH_ARTICLES,
         payload: request
     }
 }
 
-export function createPost(value, callback){
-    const request = axios.post()
+export function createArticle(values, callback){
+    const request = axios.post(`${ROOT_URL}/articles/new`)
 
     return {
-        type: CREATE_POST,
+        type: CREATE_ARTICLE,
         payload: request
     }
 }
 
-export function fetchSinglePost(id){
+export function fetchSingleArticle(id){
     const request = axios.post()
 
     return{
-        type: FETCH_SINGLE_POST,
+        type: FETCH_SINGLE_ARTICLE,
         payload: request
     }
 }
 
-export function deletePost(id){
-    const request = axios.post()
+export function deleteArticle(id){
+    const request = axios.post(`${R}`)
 
     return{
-        type: DELETE_POST,
+        type: DELETE_ARTICLE,
         payload: request
     }
 }
