@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, IndexRoute } from 'react-router-dom'
 import {Provider} from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import promise from 'redux-promise'
@@ -15,9 +15,9 @@ export default renderRoutes= () => (
    <Provider>
     <BrowserRouter>
         <Switch>
-            <Route path="/api/v1/create" component={ArticlesNew} />
-            <Route path="/api/v1/show" component={ArticlesShow} />
-            <Route path="/api/v1/index" component={ArticlesIndex} />
+            <Route path="/articles/new" component={ArticlesNew} />
+            <Route path="/articles/show" component={ArticlesShow} />
+            <Route exact path="/" component={ArticlesIndex} />
         </Switch>
     </BrowserRouter>
    </Provider>
