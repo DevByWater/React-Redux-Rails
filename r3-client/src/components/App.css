@@ -1,0 +1,13 @@
+.app-container{
+    margin-top: 25px;
+    display: flex;
+    align-content: center;
+}
+.index-container,
+.new-container
+{
+    padding: 20px;
+}
+.btn{
+    margin: 10px;
+}

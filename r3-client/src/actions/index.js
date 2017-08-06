@@ -6,10 +6,10 @@ export const CREATE_ARTICLE = 'create_article'
 export const DELETE_ARTICLE = 'delete_article'
 
 const ROOT_URL = "http://localhost:3030/api/v1"
-const API_KEY
 
-export function fetchArticle(){
-    const requests = axios.get(`${ROOT_URL}/articles`)
+
+export function fetchArticles(){
+    const request = axios.get(`${ROOT_URL}/articles`)
     
     return{
         type: FETCH_ARTICLES,
@@ -18,7 +18,7 @@ export function fetchArticle(){
 }
 
 export function createArticle(values, callback){
-    const request = axios.post(`${ROOT_URL}/articles/new`)
+    const request = axios.post(`${ROOT_URL}/articles/create`)
 
     return {
         type: CREATE_ARTICLE,
@@ -27,7 +27,7 @@ export function createArticle(values, callback){
 }
 
 export function fetchSingleArticle(id){
-    const request = axios.post()
+    const request = axios.post(`${ROOT_URL}/articles/${id}`)
 
     return{
         type: FETCH_SINGLE_ARTICLE,
@@ -36,7 +36,7 @@ export function fetchSingleArticle(id){
 }
 
 export function deleteArticle(id){
-    const request = axios.post(`${R}`)
+    const request = axios.post(`${ROOT_URL}`)
 
     return{
         type: DELETE_ARTICLE,

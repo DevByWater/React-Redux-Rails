@@ -6,12 +6,22 @@ module Api
                 render json: Article.all
             end
 
+            def create
+                @article = Article.create(article_params)
+                if @article.save
+                    render json: @article, status: 201
+                else
+                    render json: { errors: @article.errors.full_messages }, status: 422
+                end
+            end
+
             def show
             
             end
 
             def destroy
-            
+                @article.destroy
+                render :show, status: :ok
             end
 
             private
