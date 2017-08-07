@@ -26,7 +26,7 @@ class ArticlesIndex extends Component{
         return (
             <div className="container index-container panel panel-default col-xs-10 col-sm-6">
                 <div className="text-center">
-                    <Link className="btn btn-primary" to="/articles/new">
+                    <Link className="btn btn-primary" to="/new">
                         + New Article
                     </Link>
                 </div>

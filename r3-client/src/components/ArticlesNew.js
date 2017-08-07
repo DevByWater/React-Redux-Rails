@@ -21,7 +21,7 @@ class ArticlesNew extends Component{
         )
     }
 
-    onSubmit(values){
+    onSubmit( values){
         this.props.createArticle(values, ()=>{
             this.props.history.push("/")
         })
@@ -29,6 +29,7 @@ class ArticlesNew extends Component{
 
     render(){
         const { handleSubmit } = this.props
+        console.log(this.props)
         return (
             <div className="container panel panel-default new-container">
                 <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>

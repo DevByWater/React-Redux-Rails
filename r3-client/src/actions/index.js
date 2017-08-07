@@ -5,7 +5,7 @@ export const FETCH_SINGLE_ARTICLE = 'fetch_single_article'
 export const CREATE_ARTICLE = 'create_article'
 export const DELETE_ARTICLE = 'delete_article'
 
-const ROOT_URL = "http://localhost:3030/api/v1"
+const ROOT_URL = "http://localhost:5000/api/v1"
 
 
 export function fetchArticles(){
@@ -18,7 +18,7 @@ export function fetchArticles(){
 }
 
 export function createArticle(values, callback){
-    const request = axios.post(`${ROOT_URL}/articles/create`)
+    const request = axios.post(`${ROOT_URL}/articles`)
 
     return {
         type: CREATE_ARTICLE,

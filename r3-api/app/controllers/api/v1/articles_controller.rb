@@ -21,7 +21,7 @@ module Api
 
             def destroy
                 @article.destroy
-                render :show, status: :ok
+                render :index, status: :ok
             end
 
             private

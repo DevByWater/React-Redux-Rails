@@ -19,9 +19,9 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore)
             <BrowserRouter>
                 <App>
                     <Switch>
-                        <Route path="/articles/new" component={ArticlesNew} />
-                        <Route path="/articles/:id" component={ArticlesShow} />
-                        <Route exact path="/articles" component={ArticlesIndex} />
+                        <Route path="/new" component={ArticlesNew} />
+                        <Route path="/:id" component={ArticlesShow} />
+                        <Route exact path="/" component={ArticlesIndex} />
                     </Switch> 
                 </App>
             </BrowserRouter>
